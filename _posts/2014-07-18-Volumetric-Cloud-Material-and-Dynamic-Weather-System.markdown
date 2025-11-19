@@ -15,7 +15,7 @@ In this project, I expanded upon Unreal Engine’s default volumetric cloud syst
 Dissatisfied with the limitations of the default cloud settings, I designed a new material to intergate into the unreal volumetric cloud system from scratch, gaining extensive experience in volumetric rendering, ray casting, and ray marching, as well as optimizing performance for real-time applications.
 
 ![cloud2](img/clouds/clouds2.jpg)
-![cloud5](img/clouds/clouds5.jpg)
+![cloud5](img/clouds/Clouds5.jpg)
 
 Key features and innovations of the project include:
 
@@ -25,7 +25,7 @@ Key features and innovations of the project include:
 
 **Realistic Visuals:** Experimented with cloud shapes, density, and lighting effects, drawing inspiration from real-world how other games achieve realistic skies.  
 
-![cloud8](img/clouds/clouds8.jpg)
+![cloud8](img/clouds/Clouds8.jpg)
 
 I designed the system to be efficient and scalable, with minimal performance impact on gameplay. The cost of the dynamic weather system depends on how much of the screen contains clouds:  
 
@@ -36,9 +36,9 @@ Volumetric clouds: ~4 ms on average, settings tweaks can lower this at the cost 
 While there is still room for optimization, it's always a balance between beauty and speed and for this project I wanted beauty.
 
 
-![cloud3](img/clouds/clouds3.jpg)
+![cloud3](img/clouds/Clouds3.jpg)
 
 Through this project, I developed a strong understanding of volumetric shaders, GPU-efficient rendering techniques, and complex material workflows within Unreal Engine. Additionally, I gained practical experience in creating artist-friendly systems for procedural and data-driven environments, bridging the gap between technical programming and visual design.
 
-![cloud7](img/clouds/clouds7.jpg)
-![cloud4](img/clouds/clouds4.jpg)
+![cloud7](img/clouds/Clouds7.jpg)
+![cloud4](img/clouds/Clouds4.jpg)

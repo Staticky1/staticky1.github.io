@@ -97,7 +97,7 @@ header {
             rgba(0,0,0,0.5),      /* top tint */
             rgba(0,0,0,0.5)       /* bottom tint */
         ),
-        url('img/clouds/clouds4.jpg') center/cover no-repeat;
+        url('img/clouds/Clouds4.jpg') center/cover no-repeat;
 
     border-radius: 10px; /* optional */
 }
