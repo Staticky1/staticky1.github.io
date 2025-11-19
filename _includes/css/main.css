@@ -40,7 +40,7 @@ hr.star-light,
 hr.star-primary {
     margin: 25px auto 30px;
     padding: 0;
-    max-width: 250px;
+    max-width: 350px;
     border: 0;
     border-top: solid 5px;
     text-align: center;
@@ -49,7 +49,7 @@ hr.star-primary {
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
+    
     display: inline-block;
     position: relative;
     top: -.8em;
@@ -84,6 +84,22 @@ header {
     text-align: center;
     color: #fff;
     background: #{{ site.color.primary }};
+}
+
+.tinted-bg {
+    position: relative;
+    color: white;
+    padding-top: 200px;
+    padding-bottom: 50px;
+    /* Tint + Image in one line */
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.5),      /* top tint */
+            rgba(0,0,0,0.5)       /* bottom tint */
+        ),
+        url('img/clouds/clouds4.jpg') center/cover no-repeat;
+
+    border-radius: 10px; /* optional */
 }
 
 header .container {
@@ -224,13 +240,21 @@ section.success {
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
     position: absolute;
-    top: 50%;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 20px;
-    margin-top: -12px;
+    height: 100%;
+
+    /* Centering */
+    display: flex;
+    align-items: center;   /* vertical center */
+    justify-content: center; /* horizontal center */
     text-align: center;
+
+    /* Style */
     font-size: 20px;
     color: #fff;
+    padding: 10px; /* buffer around text */
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
@@ -413,15 +437,39 @@ footer .footer-below {
     outline: 0;
 }
 
+/* Modal content: fill the dialog */
 .portfolio-modal .modal-content {
-    padding: 100px 0;
-    min-height: 100%;
-    border: 0;
-    border-radius: 0;
+    max-width: 100% !important;             /* your desired modal width */
+    width: auto !important;              /* fill the dialog width */
+    margin: 40px 200px;     
+    box-sizing: border-box;
+    background: #fff;
+    pointer-events: all;
     text-align: center;
-    background-clip: border-box;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+}
+
+/* Modal body: wrap text and scale images */
+.portfolio-modal .modal-body {
+    padding: 50px;
+    max-width: 100% !important;             /* your desired modal width */
+    width: auto !important;              /* fill the dialog width */ 
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Images scale to fit modal */
+.portfolio-modal .modal-body img,
+.portfolio-modal .modal-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+
+.portfolio-modal .modal-body,
+.portfolio-modal .modal-body * {
+  text-align: center;
 }
 
 .portfolio-modal .modal-content h2 {
@@ -429,12 +477,36 @@ footer .footer-below {
     font-size: 3em;
 }
 
-.portfolio-modal .modal-content img {
-    margin-bottom: 30px;
+.portfolio-modal .modal-content .item-details {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px 0;
 }
 
-.portfolio-modal .modal-content .item-details {
-    margin: 30px 0;
+.portfolio-modal pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 6px;
+}
+
+.portfolio-modal .modal-body h1,
+.portfolio-modal .modal-body h2,
+.portfolio-modal .modal-body h3,
+.portfolio-modal .modal-body h4 {
+  word-break: break-word;
+}
+
+.portfolio-modal .modal-content {
+  pointer-events: all;
+}
+
+.portfolio-modal .modal-body {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+    justify-content: center;
 }
 
 .portfolio-modal .close-modal {
@@ -471,7 +543,6 @@ footer .footer-below {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
-
 .navbar-nav>.active>a {
     background-color: #{{ site.color.secondary-dark }} !important;
 }

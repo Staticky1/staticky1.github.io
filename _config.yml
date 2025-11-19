@@ -1,10 +1,10 @@
 # Site settings
-title: Josh Jamieson Portfolio
+title: Josh Jamieson
 email: joshjamieson16@gmail.com
 url: staticky1.github.io
 description: "A collection of interesting projects and articles from my experience programming and working on technical art within C++ and the Unreal Engine."
 keywords: "Portfolio, unreal engine, art, programming"
-skills: "Programming - Technical Artist - Unreal Generalist"
+skills: "Programming - Technical Art - Unreal Generalist"
 meta_author: Jamieson Josh
 
 # Google webmaster tools
@@ -25,10 +25,10 @@ disqus_shortname: myshortname
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 18bc9c #80B3FF
-  primary-rgb: "24,288,156" #"128,179,255"
-  secondary: 2c3e50 #FD6E8A
-  secondary-dark: 233140 #A2122F
+  primary: 4f5d75 #80B3FF
+  primary-rgb: "79, 93, 117" #"128,179,255"
+  secondary: 2d3142 #FD6E8A
+  secondary-dark: bfc0c0 #A2122F
 
 # Footer settings
 footer:
@@ -43,14 +43,17 @@ social:
     url: https://www.linkedin.com/in/josh-jamieson-law/
   - title: github
     url: http://github.com/staticky1
+  - title: discord
+    url: https://discord.com/users/203744315799764993
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: Christchurch
+  - line: Cass Bay,
+  - line: Christchurch,
   - line: New Zealand
 
 # Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+credits: 'To make this site I''ve edited the open source Freelancer theme, which itself is based on the Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
 
 # Build settings
 markdown: kramdown
