@@ -14,14 +14,14 @@ For this project, I developed a day-night cycle subsystem in Unreal Engine that 
 
 ![daynight3](img/daynight/daynight3.jpg)
 
-This project required a deep understanding of Unreal Engine’s dynamic lighting system, atmosphere setup, and interaction with material systems. I also created a complex sky sphere material, extending the one included in the Sun position calculator plugin. The material includes:
+This project required a decent understanding of Unreal Engine’s dynamic lighting system, atmosphere setup, and interaction with material systems. I also created a complex sky sphere material, extending the one included in the Sun position calculator plugin. The material includes:
 
-Correct mapping of the lunar surface from a flat texture, I set it up to allow for rotation of the moon but our moon is tidally locked.
+Correct mapping of the lunar surface from a flat texture, I set it up to allow for rotation of the moon but our moon is tidally locked. 
 
 Moon terminator effect for realistic daytime shading on the moon.
 
 Accurate moon phases that dynamically change the intensity and distribution of moonlight.
 
-The system integrates with Unreal’s lighting pipeline to ensure that both directional light (sun and moon) and atmospheric effects respond correctly to changes in time and location. This project taught me a lot about dynamic lighting, atmosphere rendering, and material-driven environmental effects in Unreal, as well as how to combine mathematical astronomical calculations with game engine visual systems.
+The system integrates with Unreal’s lighting pipeline to ensure that both directional light (sun and moon) and atmospheric effects blend and respond correctly to changes in time and location. This project taught me a lot about dynamic lighting, atmosphere rendering, and material-driven environmental effects in Unreal, as well as how to combine mathematical astronomical calculations with game engine visual systems.
 
 ![daynight2](img/daynight/daynight2.jpg)

@@ -12,7 +12,7 @@ description: Use this area of the page to describe your project. Lorem ipsum dol
 
 In this project, I expanded upon Unreal Engine’s default volumetric cloud system to create a custom volumetric cloud material and a dynamic weather system driven by data assets. 
 
-Dissatisfied with the limitations of the default cloud settings, I designed a new material to intergate into the unreal volumetric cloud system from scratch, gaining extensive experience in volumetric rendering, ray casting, and ray marching, as well as optimizing performance for real-time applications.
+Dissatisfied with the limitations of the default cloud settings, I designed a new material to intergate into the unreal volumetric cloud system from scratch, gaining some experience in volumetric rendering, ray casting, and ray marching, as well as optimizing performance for real-time applications.
 
 ![cloud2](img/clouds/clouds2.jpg)
 ![cloud5](img/clouds/Clouds5.jpg)
@@ -38,7 +38,7 @@ While there is still room for optimization, it's always a balance between beauty
 
 ![cloud3](img/clouds/Clouds3.jpg)
 
-Through this project, I developed a strong understanding of volumetric shaders, GPU-efficient rendering techniques, and complex material workflows within Unreal Engine. Additionally, I gained practical experience in creating artist-friendly systems for procedural and data-driven environments, bridging the gap between technical programming and visual design.
+Through this project, I developed a good understanding of volumetric shaders, GPU-efficient rendering techniques, and complex material workflows within Unreal Engine. Additionally, I gained practical experience in creating artist-friendly, scaleable systems for procedural and data-driven environments. Next project is to write a volumetric shader in UE5 from scratch.
 
 ![cloud7](img/clouds/Clouds7.jpg)
 ![cloud4](img/clouds/Clouds4.jpg)

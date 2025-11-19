@@ -23,4 +23,6 @@ This was my first attempt at developing a large-scale Windows application. I pla
 
 Through this project, I gained significant experience in planning and structuring a large software project, emphasizing maintainable code, modular architecture, and data-driven design. It was a valuable exercise in balancing simulation complexity with usability and in understanding the workflow of integrating an external game with a custom management tool.
 
+The program did end up making me realise just how old and limited IL-2 is, it's hard to have complex and intresting missions. Maybe I'll have to make my own flight simulator at some point.
+
 ![Crosswind4](img/crosswind/Crosswind4.jpg)
