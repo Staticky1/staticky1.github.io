@@ -80,6 +80,13 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
+@media (max-width: 480px) {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 header {
     text-align: center;
     color: #fff;
@@ -236,6 +243,12 @@ section.success {
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
     opacity: 1;
+}
+
+@media (hover: none) {
+  #portfolio .portfolio-item .portfolio-link .caption {
+    opacity: 1 !important;
+  }
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
@@ -437,88 +450,60 @@ footer .footer-below {
     outline: 0;
 }
 
-/* Modal content: fill the dialog */
+.portfolio-modal .modal-dialog {
+    width: auto;
+  max-width: 70%;           /* controls modal width */
+  margin: 40px auto;
+}
+
 .portfolio-modal .modal-content {
-    max-width: 100% !important;             /* your desired modal width */
-    width: auto !important;              /* fill the dialog width */
-    margin: 40px 200px;     
-    box-sizing: border-box;
-    background: #fff;
-    pointer-events: all;
-    text-align: center;
+    padding: clamp(20px, 5vw, 20px)  clamp(10px, 4vw, 60px);
+  border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Modal body: wrap text and scale images */
 .portfolio-modal .modal-body {
-    padding: 50px;
-    max-width: 100% !important;             /* your desired modal width */
-    width: auto !important;              /* fill the dialog width */ 
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-/* Images scale to fit modal */
-.portfolio-modal .modal-body img,
-.portfolio-modal .modal-content img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-}
-
-
-.portfolio-modal .modal-body,
-.portfolio-modal .modal-body * {
   text-align: center;
 }
 
-.portfolio-modal .modal-content h2 {
-    margin: 0;
-    font-size: 3em;
-}
-
-.portfolio-modal .modal-content .item-details {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 30px 0;
-}
-
-.portfolio-modal pre {
+.portfolio-modal .modal-image {
   max-width: 100%;
-  overflow-x: auto;
-  padding: 12px;
-  background: #f5f5f5;
-  border-radius: 6px;
+  height: auto;
+  margin: 20px 0;
 }
 
-.portfolio-modal .modal-body h1,
-.portfolio-modal .modal-body h2,
-.portfolio-modal .modal-body h3,
-.portfolio-modal .modal-body h4 {
-  word-break: break-word;
+.portfolio-modal .post-content p {
+  font-size: clamp(1rem, 2vw, 2rem);
+  line-height: 1.6;
+  margin: 1em;
 }
 
-.portfolio-modal .modal-content {
-  pointer-events: all;
+.portfolio-modal .post-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
 }
 
-.portfolio-modal .modal-body {
-  word-wrap: break-word;
-  overflow-wrap: anywhere;
-    justify-content: center;
+.portfolio-modal .modal-content h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    line-height: 1.2;
+    word-break: break-word;
 }
 
 .portfolio-modal .close-modal {
     position: absolute;
-    top: 25px;
-    right: 25px;
-    width: 75px;
-    height: 75px;
+    top: clamp(10px, 2vw, 25px);
+    right: clamp(10px, 2vw, 25px);
+    width: clamp(40px, 5vw, 75px);
+    height: clamp(40px, 5vw, 75px);
     background-color: transparent;
     cursor: pointer;
-}
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .portfolio-modal .close-modal:hover {
     opacity: .3;
 }
@@ -526,8 +511,7 @@ footer .footer-below {
 .portfolio-modal .close-modal .lr {
     z-index: 1051;
     width: 1px;
-    height: 75px;
-    margin-left: 35px;
+    height: clamp(40px, 5vw, 75px);
     background-color: #{{ site.color.secondary }};
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -537,12 +521,13 @@ footer .footer-below {
 .portfolio-modal .close-modal .lr .rl {
     z-index: 1052;
     width: 1px;
-    height: 75px;
+    height: clamp(40px, 5vw, 75px);
     background-color: #{{ site.color.secondary }};
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+
 .navbar-nav>.active>a {
     background-color: #{{ site.color.secondary-dark }} !important;
 }
