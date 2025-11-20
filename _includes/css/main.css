@@ -451,8 +451,9 @@ footer .footer-below {
 }
 
 .portfolio-modal .modal-dialog {
-    width: auto;
-  max-width: 70%;           /* controls modal width */
+
+    max-width: clamp(90%, 70%, 70%);  
+        width: auto;       /* controls modal width */
   margin: 40px auto;
 }
 
