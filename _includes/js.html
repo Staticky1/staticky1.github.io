@@ -20,6 +20,50 @@
 <!-- Custom Theme JavaScript -->
 <script src="{{ " js/freelancer.js" }}"></script>
 
+<!-- Direct portfolio modual links -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Open modal if URL has a hash
+    var hash = window.location.hash;
+    if (hash && $(hash).hasClass("modal")) {
+        $(hash).modal("show");
+    }
+
+    // When a modal opens, push its ID into the URL
+    $('.modal').on('show.bs.modal', function () {
+        var modalId = $(this).attr('id');
+        history.pushState(null, null, '#' + modalId);
+    });
+
+    // When a modal closes, remove the hash from the URL
+    $('.modal').on('hide.bs.modal', function () {
+        if (window.location.hash) {
+            history.pushState(null, null, window.location.pathname + window.location.search);
+        }
+    });
+
+    // Handle browser Back button
+    window.addEventListener('popstate', function () {
+        var hash = window.location.hash;
+
+        if (hash && $(hash).hasClass("modal")) {
+            // Back navigates to another modal (rare but supported)
+            $(hash).modal("show");
+        } else {
+            // Back navigates to a no-hash state close any open modal
+            $('.modal').modal('hide');
+        }
+    });
+
+    //Scroll to top when opened
+    $('.modal').on('shown.bs.modal', function () {
+    $(this).scrollTop(0);
+});
+
+});
+</script>
+
 {% if site.contact == "disqus" %}
 <!-- Disqus Stuff -->
 {% include js_disqus.html %}
