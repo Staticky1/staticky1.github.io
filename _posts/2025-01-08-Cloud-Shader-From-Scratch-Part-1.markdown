@@ -40,6 +40,9 @@ The composite shader does a depth aware bilinear upscale to match the cloud rend
 Overall the rendering architecture is as follows:
 UAdvancedCloudRenderingSubsystem adds and manages the FCloudRenderingSceneExtention. The scene extension handles gathering data from the CPU and passing it to the GPU shaders. After the main pass the cloud pass is run to fill out the cloud render targets. Then at the beginning of postprocessing the clouds are composited into the scene.
 
+![scratch3](img/scratch/scratch3.jpg)
+*Red ball composited into the scene by the cloud shader*
+
 **Cloud and Weather system**
 
 The next step in the process is to set up a system that feeds cloud data into the shader. It will need to tell the shader in which areas to run a raymarch to create clouds. The built in cloud shader uses a planet sized sphere intersection to tell the shader where to run. I wanted to create a different system that instead only ran the shader in areas of the sky where clouds actually were. In addition to this, the system should allow for the creation of clouds to be done on and managed by the CPU. This way would simplify the creation and replication of weather as well as allowing AI to utilize cloud data.
@@ -49,6 +52,7 @@ My first attempt was to create a cloud manager actor, ACloudManager. This would 
 This system worked well, but presented a few issues that would impact performance. Firstly each ray in the shader needed to check for intersections with every cloud instance in the buffer. The performance impact of this would be huge when the system was scaled to thousands of clouds. I’m sure there is a mathematical way of optimizing such a loop but I already had a better idea for FCloudInstance storage.
 
 ![scratch2](img/scratch/scratch2.jpg)
+*intital cloud tests using actor volumes*
 
 **The Cloud Grid system**
 
@@ -63,6 +67,7 @@ When updating the grid GPU buffers I was careful to batch updates and perform th
 This grid system ended up being way bigger than I thought it would be, but nothing overly complex had to be done to have it work. The system, while hard to visualize in the editor because of its scale, is simple to understand. Alongside implementing the grid system I added custom logging categories, a cheat manager for console commands and a cloud actor that creates a cloud instance for easy debugging. 
 
 ![scratch1](img/scratch/scratch1.jpg)
+*Cloud grid debug visuals*
 
 **Next Steps**
 
